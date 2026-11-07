@@ -1,0 +1,13 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "period of performance": "text",
+    "external": "checkbox",
+    "deadline": "date",
+    "funder": "text",
+    "internal_deadline": "date",
+    "due_to_funder": "date"
+  }
+}

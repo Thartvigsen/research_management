@@ -1,0 +1,45 @@
+views:
+  - type: table
+    name: All Awards
+    filters:
+      and:
+        - type == "proposal"
+        - file.name != "proposal_template"
+    order:
+      - file.name
+      - title
+      - opportunity
+      - due_to_funder
+      - budget
+  - type: table
+    name: In Preparation
+    filters:
+      and:
+        - type == "proposal"
+        - file.name != "proposal_template"
+        - status != "funded"
+    order:
+      - file.name
+      - CFP
+      - internal_deadline
+      - due_to_funder
+      - budget
+      - external
+      - funder
+  - type: table
+    name: Post Award
+    filters:
+      and:
+        - type == "proposal"
+        - status == "funded"
+    order:
+      - file.name
+      - period
+      - my_budget
+      - budget
+      - title
+    sort:
+      - property: budget
+        direction: ASC
+    columnSize:
+      note.period: 124
